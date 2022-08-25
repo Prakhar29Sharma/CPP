@@ -25,6 +25,30 @@ class Queue {
 			elements = (front > rear)?(size - front + rear + 1):(rear - front + 1);
 			return elements;
 		}
+		
+		/*
+		
+		void noOfElements ()
+		{
+			if(front == -1 && rear == -1)
+			{
+				printf("\n%d", 0);
+			}
+			else
+			{
+				if(front > rear)
+				{
+					printf("\n%d", size - front + rear + 1);
+				}
+				else
+				{
+					printf("\n%d", rear - front + 1);
+				}
+			}
+		}
+		
+		*/ 
+		
 		void enqueue(int value){
 			if(front == 0 && rear == size-1 || rear == ((front-1)%(size-1))){
 			printf("Queue is Full!\n");
@@ -90,6 +114,13 @@ class Queue {
 							printf("%d ", arr[i]);
 					}
 				}
+		}
+		
+		
+		void DeleteQueue 
+		{
+			front = -1;
+			rear = -1;
 		}
 };
 
