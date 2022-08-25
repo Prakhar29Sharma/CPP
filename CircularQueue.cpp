@@ -14,6 +14,17 @@ class Queue {
 			size = s;
 			arr = new int[s];
 		}
+		
+		int noOfElements()
+		{
+			if(front == -1 && rear == -1)
+			{
+				return 0;
+			}
+			int elements;
+			elements = (front > rear)?(size - front + rear + 1):(rear - front + 1);
+			return elements;
+		}
 		void enqueue(int value){
 			if(front == 0 && rear == size-1 || rear == ((front-1)%(size-1))){
 			printf("Queue is Full!\n");
@@ -96,6 +107,7 @@ int main()
 		printf("\n2.Dequeue");
 		printf("\n3.Show");
 		printf("\n4.Exit");
+		printf("\n5.Number of Elements");
 		printf("\nEnter your choice : ");
 		scanf("%d", &ch);
 		switch(ch)
@@ -111,9 +123,14 @@ int main()
 			case 3:
 				q.displayQueue();
 				break;
+			case 5:
+				int n;
+				n = q.noOfElements();
+				printf("\nNumber of Elements : %d", n);
+				break;
 		}
 		
-		if(ch < 1 || ch > 4)
+		if(ch < 1 || ch > 5)
 		{
 			printf("\nInvalid Choice! Try Again!");
 		}
