@@ -1,14 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-	
-	int T;
-	
-	scanf("%d", &T);
-	
-	do{
-		int X,Y;
+void test()
+{
+	int X,Y;
 		
 		scanf("%d %d", &X, &Y);
 		
@@ -24,7 +19,16 @@ int main(){
 		{
 			printf("ANY\n");
 		}
-		
+}
+
+int main(){
+	
+	int T;
+	
+	scanf("%d", &T);
+	
+	do{
+		test();
 		T--;
 	} while(T!=0);
 	
