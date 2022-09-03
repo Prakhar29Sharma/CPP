@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// for grid of 4x4
+// for grid of 10x10
 int grid[size][size];
 
 struct robot{
@@ -94,8 +94,6 @@ int main()
 {
     int i, j, init_r, init_c;
 
-
-    // N -> number of instruction
     // init_r, init_c -> initial position of robot
     // Assigning zero value to boxes initially
 
@@ -110,7 +108,7 @@ int main()
     printf("Enter initial position of robot in grid : ");
     scanf("%d %d", &init_r, &init_c);
 
-    if(init_c > 10 || init_r > 10 || init_c < 1 || init_r < 1)
+    if(init_c > size || init_r > size || init_c < 1 || init_r < 1)
     {
         printf("Invalid position!\n");
         return 0;
@@ -119,6 +117,7 @@ int main()
     Rrc.Sr = init_r-1;
     Rrc.Sc = init_c-1;
 
+    // instructions
     move_north();
     move_east();
     move_south();
